@@ -20,6 +20,6 @@ This is a simple Python project that allows users to register, log in, and manag
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/student-grade-system.git
+   git clone https://github.com/heqoN/student-grade-system.git
    cd student-grade-system
 
