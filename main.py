@@ -18,7 +18,6 @@ def register():
         phone = input("  Telefon numaranız  >> ")
         email = input("  Email adresiniz  >> ")
         passw = input("  Şifreniz  >> ")
-        # Eğer dosya boş değilse satır sonu ekle
         if os.path.getsize("database.txt") > 0:
             file.write("\n")
         file.write(f"{name} {phone} {email} {passw}")
@@ -30,10 +29,10 @@ def login():
     with open("database.txt","r",encoding="utf-8") as file:
         for line in file:
             line = line.strip()
-            if not line:   # boş satır varsa atla
+            if not line:   
                 continue
             parts = line.split()
-            if len(parts) < 4:  # eksik satır varsa atla
+            if len(parts) < 4:  
                 continue
             storedName,storedPhone,storedEmail,storedPassw = parts
             if email == storedEmail and passw == storedPassw :
